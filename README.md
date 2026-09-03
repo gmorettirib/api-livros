@@ -1,88 +1,98 @@
-# 📚 API de Livros
+# 🌿 API de Livros
 
-API REST desenvolvida em **Python com FastAPI** para gerenciamento de um catálogo de livros.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10%2B-2E7D32?style=for-the-badge&logo=python&logoColor=white" alt="Python" />
+  <img src="https://img.shields.io/badge/FastAPI-REST_API-1B5E20?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI" />
+  <img src="https://img.shields.io/badge/MySQL%20%2F%20MariaDB-Database-388E3C?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL / MariaDB" />
+  <img src="https://img.shields.io/badge/Status-Acadêmico-43A047?style=for-the-badge" alt="Status" />
+</p>
 
-O projeto foi criado com finalidade acadêmica e tem como objetivo colocar em prática conceitos fundamentais de desenvolvimento back-end, como **APIs REST, métodos HTTP, CRUD, validação de dados, integração com banco de dados e documentação de endpoints**.
+> Uma API REST simples e organizada para gerenciamento de um catálogo de livros, desenvolvida com **Python + FastAPI**.
 
-A aplicação utiliza **MySQL/MariaDB** como banco de dados, **SQLAlchemy** para comunicação com o banco e **Pydantic** para validação dos dados recebidos pela API.
+Este projeto foi criado com foco acadêmico para transformar conceitos de back-end em prática. Nele são aplicados fundamentos como **APIs REST, métodos HTTP, operações CRUD, validação de dados, integração com banco de dados e documentação automática de endpoints**.
+
+A aplicação utiliza **MySQL/MariaDB** para persistência dos dados, **SQLAlchemy** como ORM, **Pydantic** para validação e **PyMySQL** como driver de conexão.
 
 ---
 
-## 🚀 Funcionalidades
+## 🍃 Funcionalidades
 
-A API permite realizar as principais operações de gerenciamento de livros:
+> 🟩 **Objetivo:** oferecer uma API enxuta, didática e fácil de testar.
 
-* 🔎 Listar todos os livros;
-* 🔍 Consultar um livro pelo ID;
-* ➕ Cadastrar novos livros;
-* ✏️ Atualizar livros existentes;
-* 🗑️ Excluir livros;
-* ❤️ Verificar o status da API e da conexão com o banco.
 
-Essas operações representam o conceito de **CRUD**:
+A API concentra as operações essenciais para administrar o catálogo de livros:
 
-| Operação | Método HTTP | Função                |
-| -------- | ----------- | --------------------- |
-| Create   | `POST`      | Criar um registro     |
-| Read     | `GET`       | Consultar registros   |
-| Update   | `PUT`       | Atualizar um registro |
-| Delete   | `DELETE`    | Excluir um registro   |
+- 🔎 Listar todos os livros;
+- 🔍 Consultar um livro pelo ID;
+- ➕ Cadastrar novos livros;
+- ✏️ Atualizar livros existentes;
+- 🗑️ Excluir livros;
+- ❤️ Verificar o status da API e da conexão com o banco.
+
+Essas rotas seguem o padrão **CRUD** tradicional:
+
+| Operação | Método HTTP | Função |
+|---|---|---|
+| Create | `POST` | Criar um registro |
+| Read | `GET` | Consultar registros |
+| Update | `PUT` | Atualizar um registro |
+| Delete | `DELETE` | Excluir um registro |
 
 ---
 
 ## 🎯 Objetivos do projeto
 
-O projeto foi desenvolvido para praticar:
+Durante o desenvolvimento, o projeto explora os seguintes conceitos:
 
-* Desenvolvimento de APIs REST;
-* Criação de endpoints com FastAPI;
-* Utilização dos métodos HTTP;
-* Implementação de operações CRUD;
-* Integração entre Python e banco de dados relacional;
-* Utilização de ORM com SQLAlchemy;
-* Validação de dados com Pydantic;
-* Configuração através de variáveis de ambiente;
-* Utilização de códigos de status HTTP;
-* Documentação automática com Swagger UI;
-* Organização modular de aplicações back-end.
+- Desenvolvimento de APIs REST;
+- Criação de endpoints com FastAPI;
+- Utilização dos métodos HTTP;
+- Implementação de operações CRUD;
+- Integração entre Python e banco de dados relacional;
+- Utilização de ORM com SQLAlchemy;
+- Validação de dados com Pydantic;
+- Configuração através de variáveis de ambiente;
+- Utilização de códigos de status HTTP;
+- Documentação automática com Swagger UI;
+- Organização modular de aplicações back-end.
 
 ---
 
-# 🛠️ Tecnologias
+# 🟢 Tecnologias utilizadas
 
 ### Python
 
-Linguagem utilizada no desenvolvimento da aplicação.
+Linguagem principal utilizada na construção da aplicação.
 
 ### FastAPI
 
-Framework responsável pela criação da API REST.
+Framework utilizado para estruturar e disponibilizar os endpoints REST.
 
 Além de oferecer uma estrutura simples para criação de endpoints, o FastAPI possui suporte integrado à validação de dados e geração automática de documentação.
 
 ### SQLAlchemy
 
-ORM utilizado para realizar a comunicação entre a aplicação Python e o banco de dados.
+ORM responsável por abstrair e organizar a comunicação entre a aplicação Python e o banco de dados.
 
 ### Pydantic
 
-Responsável pela validação e estruturação dos dados enviados e recebidos pela API.
+Utilizado para validar e estruturar os dados de entrada e saída da API.
 
 ### PyMySQL
 
-Driver utilizado para conectar o SQLAlchemy ao MySQL/MariaDB.
+Driver que permite a conexão do SQLAlchemy com MySQL/MariaDB.
 
 ### Uvicorn
 
-Servidor ASGI utilizado para executar a aplicação FastAPI.
+Servidor ASGI utilizado para executar a aplicação FastAPI em ambiente de desenvolvimento.
 
 ### MySQL / MariaDB
 
-Banco de dados relacional utilizado para armazenar os registros da aplicação.
+Banco de dados relacional responsável por armazenar os registros do catálogo.
 
 ---
 
-# 🧩 Estrutura do projeto
+# 🌱 Estrutura do projeto
 
 ```text
 api-livros/
@@ -98,6 +108,7 @@ api-livros/
 ├── .gitignore
 ├── README.md
 └── requirements.txt
+
 ```
 
 ### 📁 `app/`
@@ -128,6 +139,7 @@ O banco utilizado pelo projeto é:
 
 ```text
 biblioteca_db
+
 ```
 
 ### 📄 `requirements.txt`
@@ -136,18 +148,18 @@ Contém as dependências necessárias para executar a aplicação.
 
 ---
 
-# 🔌 Endpoints
+# 🔗 Endpoints
 
 ## 📋 Resumo
 
-| Método   | Endpoint       | Descrição                                  |
-| -------- | -------------- | ------------------------------------------ |
-| `GET`    | `/livros`      | Lista todos os livros                      |
-| `GET`    | `/livros/{id}` | Busca um livro pelo ID                     |
-| `POST`   | `/livros`      | Cadastra um novo livro                     |
-| `PUT`    | `/livros/{id}` | Atualiza um livro                          |
-| `DELETE` | `/livros/{id}` | Exclui um livro                            |
-| `GET`    | `/health`      | Verifica o funcionamento da API e do banco |
+| Método | Endpoint | Descrição |
+|---|---|---|
+| `GET`                   | `/livros`      | Lista todos os livros                      |
+| `GET`                   | `/livros/{id}` | Busca um livro pelo ID                     |
+| `POST`                  | `/livros`      | Cadastra um novo livro                     |
+| `PUT`                   | `/livros/{id}` | Atualiza um livro                          |
+| `DELETE`                | `/livros/{id}` | Exclui um livro                            |
+| `GET`                   | `/health`      | Verifica o funcionamento da API e do banco |
 
 ---
 
@@ -155,6 +167,7 @@ Contém as dependências necessárias para executar a aplicação.
 
 ```http
 GET /livros
+
 ```
 
 Retorna todos os livros cadastrados.
@@ -176,6 +189,7 @@ Retorna todos os livros cadastrados.
     "ano_publicacao": 1937
   }
 ]
+
 ```
 
 ---
@@ -184,12 +198,14 @@ Retorna todos os livros cadastrados.
 
 ```http
 GET /livros/{id}
+
 ```
 
 Exemplo:
 
 ```http
 GET /livros/1
+
 ```
 
 ### Resposta
@@ -201,12 +217,14 @@ GET /livros/1
   "autor": "Machado de Assis",
   "ano_publicacao": 1899
 }
+
 ```
 
 Caso o livro não seja encontrado:
 
 ```http
 404 Not Found
+
 ```
 
 ---
@@ -215,6 +233,7 @@ Caso o livro não seja encontrado:
 
 ```http
 POST /livros
+
 ```
 
 ### Corpo da requisição
@@ -225,6 +244,7 @@ POST /livros
   "autor": "Antoine de Saint-Exupéry",
   "ano_publicacao": 1943
 }
+
 ```
 
 ### Exemplo de resposta
@@ -236,12 +256,14 @@ POST /livros
   "autor": "Antoine de Saint-Exupéry",
   "ano_publicacao": 1943
 }
+
 ```
 
 Uma criação realizada com sucesso pode retornar:
 
 ```http
 201 Created
+
 ```
 
 ---
@@ -250,12 +272,14 @@ Uma criação realizada com sucesso pode retornar:
 
 ```http
 PUT /livros/{id}
+
 ```
 
 Exemplo:
 
 ```http
 PUT /livros/3
+
 ```
 
 ### Corpo da requisição
@@ -266,6 +290,7 @@ PUT /livros/3
   "autor": "Antoine de Saint-Exupéry",
   "ano_publicacao": 1943
 }
+
 ```
 
 A API localiza o registro pelo ID informado e atualiza seus dados.
@@ -276,28 +301,32 @@ A API localiza o registro pelo ID informado e atualiza seus dados.
 
 ```http
 DELETE /livros/{id}
+
 ```
 
 Exemplo:
 
 ```http
 DELETE /livros/3
+
 ```
 
 Após a exclusão ser realizada com sucesso, a API pode retornar:
 
 ```http
 204 No Content
+
 ```
 
 ---
 
-# ❤️ Health Check
+# 💚 Health Check
 
 A API possui uma rota responsável por verificar seu funcionamento e a disponibilidade da conexão com o banco de dados.
 
 ```http
 GET /health
+
 ```
 
 ### Resposta esperada
@@ -307,32 +336,34 @@ GET /health
   "status": "ok",
   "database": "connected"
 }
+
 ```
 
 Essa rota pode ser utilizada para identificar rapidamente possíveis problemas de conexão ou disponibilidade da aplicação.
 
 ---
 
-# 📋 Códigos HTTP
+# ✅ Códigos HTTP
 
-| Código | Status                | Utilização                       |
-| ------ | --------------------- | -------------------------------- |
-| `200`  | OK                    | Requisição realizada com sucesso |
-| `201`  | Created               | Registro criado com sucesso      |
-| `204`  | No Content            | Registro excluído com sucesso    |
-| `400`  | Bad Request           | Requisição inválida              |
-| `404`  | Not Found             | Recurso não encontrado           |
-| `422`  | Unprocessable Entity  | Erro na validação dos dados      |
-| `500`  | Internal Server Error | Erro interno da aplicação        |
+| Código | Status | Utilização |
+|---|---|---|
+| `200`                  | OK                    | Requisição realizada com sucesso |
+| `201`                  | Created               | Registro criado com sucesso      |
+| `204`                  | No Content            | Registro excluído com sucesso    |
+| `400`                  | Bad Request           | Requisição inválida              |
+| `404`                  | Not Found             | Recurso não encontrado           |
+| `422`                  | Unprocessable Entity  | Erro na validação dos dados      |
+| `500`                  | Internal Server Error | Erro interno da aplicação        |
 
 ---
 
-# 🗄️ Banco de dados
+# 🌿 Banco de dados
 
 O projeto utiliza o banco:
 
 ```text
 biblioteca_db
+
 ```
 
 A comunicação ocorre através da seguinte estrutura:
@@ -351,6 +382,7 @@ MySQL / MariaDB
    │
    ▼
 biblioteca_db
+
 ```
 
 As credenciais do banco não devem ser inseridas diretamente no código.
@@ -365,6 +397,7 @@ DB_PASSWORD=sua_senha
 DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=biblioteca_db
+
 ```
 
 > ⚠️ **Importante:** nunca envie o arquivo `.env` para o GitHub quando ele possuir senhas, tokens ou outras informações sensíveis.
@@ -373,20 +406,21 @@ Adicione-o ao `.gitignore`:
 
 ```gitignore
 .env
+
 ```
 
 ---
 
-# ⚙️ Instalação
+# ⚙️ Instalação e configuração
 
 ## Pré-requisitos
 
 Antes de executar o projeto, tenha instalado:
 
-* Python 3.10 ou superior;
-* MySQL ou MariaDB;
-* Git;
-* Pip.
+- Python 3.10 ou superior;
+- MySQL ou MariaDB;
+- Git;
+- Pip.
 
 ---
 
@@ -394,12 +428,14 @@ Antes de executar o projeto, tenha instalado:
 
 ```bash
 git clone https://github.com/vitorgoncalvesb/api-livros.git
+
 ```
 
 Entre na pasta:
 
 ```bash
 cd api-livros
+
 ```
 
 ---
@@ -410,24 +446,28 @@ cd api-livros
 
 ```bash
 python -m venv venv
+
 ```
 
 Ative o ambiente:
 
 ```bash
 venv\Scripts\activate
+
 ```
 
 ### Linux / macOS
 
 ```bash
 python3 -m venv venv
+
 ```
 
 Ative:
 
 ```bash
 source venv/bin/activate
+
 ```
 
 ---
@@ -436,6 +476,7 @@ source venv/bin/activate
 
 ```bash
 pip install -r requirements.txt
+
 ```
 
 ---
@@ -448,6 +489,7 @@ Utilize o script:
 
 ```text
 database/biblioteca_db.sql
+
 ```
 
 para criar a estrutura inicial do banco.
@@ -460,35 +502,39 @@ DB_PASSWORD=sua_senha
 DB_HOST=localhost
 DB_PORT=3306
 DB_NAME=biblioteca_db
+
 ```
 
 ---
 
-# ▶️ Executando o projeto
+# ▶️ Executando a aplicação
 
 Com o ambiente virtual ativado, execute:
 
 ```bash
 uvicorn app.main:app --reload
+
 ```
 
 A API ficará disponível por padrão em:
 
 ```text
 http://127.0.0.1:8000
+
 ```
 
 O parâmetro:
 
 ```text
 --reload
+
 ```
 
 faz com que o servidor seja reiniciado automaticamente sempre que alterações forem realizadas no código durante o desenvolvimento.
 
 ---
 
-# 📖 Documentação da API
+# 📗 Documentação da API
 
 O FastAPI gera automaticamente uma interface de documentação da aplicação.
 
@@ -498,16 +544,17 @@ Com o servidor em execução, acesse:
 
 ```text
 http://127.0.0.1:8000/docs
+
 ```
 
 Através do Swagger é possível:
 
-* Visualizar os endpoints disponíveis;
-* Consultar parâmetros;
-* Visualizar os modelos de dados;
-* Enviar requisições;
-* Analisar as respostas;
-* Testar códigos HTTP.
+- Visualizar os endpoints disponíveis;
+- Consultar parâmetros;
+- Visualizar os modelos de dados;
+- Enviar requisições;
+- Analisar as respostas;
+- Testar códigos HTTP.
 
 ## ReDoc
 
@@ -515,11 +562,12 @@ Também é possível acessar uma documentação alternativa:
 
 ```text
 http://127.0.0.1:8000/redoc
+
 ```
 
 ---
 
-# 🧪 Testando a API
+# 🧪 Testando os endpoints
 
 Uma das formas mais simples de testar os endpoints é através do Swagger UI.
 
@@ -527,6 +575,7 @@ Acesse:
 
 ```text
 http://127.0.0.1:8000/docs
+
 ```
 
 Selecione um endpoint e clique em **Try it out**.
@@ -535,6 +584,7 @@ Por exemplo, para cadastrar um livro:
 
 ```http
 POST /livros
+
 ```
 
 Utilize:
@@ -545,12 +595,14 @@ Utilize:
   "autor": "George Orwell",
   "ano_publicacao": 1949
 }
+
 ```
 
 Depois consulte os registros:
 
 ```http
 GET /livros
+
 ```
 
 Também é possível testar o ciclo completo:
@@ -560,6 +612,7 @@ POST → Criar
 GET → Consultar
 PUT → Atualizar
 DELETE → Excluir
+
 ```
 
 ---
@@ -593,19 +646,20 @@ De maneira simplificada:
                   │
                   ▼
             biblioteca_db
+
 ```
 
-O cliente envia uma requisição HTTP para um endpoint da API.
+O fluxo começa quando o cliente envia uma requisição HTTP para um dos endpoints disponíveis.
 
-O FastAPI recebe e processa a requisição. Quando existem dados no corpo da requisição, eles podem ser validados através do Pydantic.
+O FastAPI recebe a requisição e direciona o processamento. Quando há dados no corpo da requisição, o Pydantic realiza a validação antes da execução da lógica.
 
-Caso seja necessário acessar o banco de dados, a aplicação utiliza SQLAlchemy e PyMySQL para realizar a operação.
+Quando a operação exige persistência ou consulta, SQLAlchemy e PyMySQL fazem a comunicação com o banco de dados.
 
-Ao final, a API devolve uma resposta HTTP ao cliente.
+Ao final do processo, a API retorna ao cliente uma resposta HTTP adequada à operação realizada.
 
 ---
 
-# 🔐 Boas práticas utilizadas
+# 🛡️ Boas práticas
 
 ### Variáveis de ambiente
 
@@ -629,33 +683,33 @@ Os endpoints podem ser consultados e testados através da documentação automá
 
 ---
 
-# 📈 Melhorias futuras
+# 🚀 Próximos passos
 
-Algumas funcionalidades que podem ser adicionadas ao projeto:
+Possíveis evoluções para deixar o projeto mais completo:
 
-* [ ] Implementação completa do CRUD;
-* [ ] Modelos utilizando SQLAlchemy;
-* [ ] Schemas utilizando Pydantic;
-* [ ] Tratamento global de erros;
-* [ ] Paginação;
-* [ ] Pesquisa por título;
-* [ ] Pesquisa por autor;
-* [ ] Filtros por ano de publicação;
-* [ ] Ordenação dos resultados;
-* [ ] Autenticação;
-* [ ] Controle de usuários;
-* [ ] Testes automatizados;
-* [ ] Docker;
-* [ ] Deploy;
-* [ ] Monitoramento;
-* [ ] Versionamento da API (`/api/v1`);
-* [ ] Expansão da documentação.
+-  Implementação completa do CRUD;
+-  Modelos utilizando SQLAlchemy;
+-  Schemas utilizando Pydantic;
+-  Tratamento global de erros;
+-  Paginação;
+-  Pesquisa por título;
+-  Pesquisa por autor;
+-  Filtros por ano de publicação;
+-  Ordenação dos resultados;
+-  Autenticação;
+-  Controle de usuários;
+-  Testes automatizados;
+-  Docker;
+-  Deploy;
+-  Monitoramento;
+-  Versionamento da API (`/api/v1`);
+-  Expansão da documentação.
 
 ---
 
-# 🎓 Finalidade acadêmica
+# 🎓 Contexto acadêmico
 
-Este projeto possui finalidade principalmente **didática e educacional**.
+Este projeto foi desenvolvido principalmente com finalidade **didática e educacional**.
 
 A proposta é transformar conceitos teóricos de desenvolvimento back-end em uma aplicação prática, permitindo compreender o funcionamento completo de uma API:
 
@@ -673,22 +727,23 @@ Regra da aplicação
 Banco de dados
    ↓
 Resposta HTTP
+
 ```
 
 Entre os principais conceitos trabalhados estão:
 
-* APIs REST;
-* HTTP;
-* CRUD;
-* Python;
-* FastAPI;
-* SQL;
-* Bancos relacionais;
-* SQLAlchemy;
-* Pydantic;
-* Variáveis de ambiente;
-* Documentação de APIs;
-* Arquitetura back-end.
+- APIs REST;
+- HTTP;
+- CRUD;
+- Python;
+- FastAPI;
+- SQL;
+- Bancos relacionais;
+- SQLAlchemy;
+- Pydantic;
+- Variáveis de ambiente;
+- Documentação de APIs;
+- Arquitetura back-end.
 
 ---
 
@@ -698,11 +753,11 @@ Desenvolvido por **Vitor Gonçalves Barros**.
 
 GitHub:
 
-**[@vitorgoncalvesb](https://github.com/vitorgoncalvesb)**
+[**@vitorgoncalvesb**](https://github.com/vitorgoncalvesb)
 
 Repositório:
 
-**[api-livros](https://github.com/vitorgoncalvesb/api-livros)**
+[**api-livros**](https://github.com/vitorgoncalvesb/api-livros)
 
 ---
 
@@ -714,12 +769,14 @@ Caso seja disponibilizado futuramente sob uma licença específica, esta seção
 
 ---
 
-## ⭐ Considerações finais
+## 🌟 Considerações finais
 
-A **API de Livros** é um projeto voltado ao aprendizado dos principais fundamentos necessários para construção de aplicações back-end modernas.
+A **API de Livros** funciona como uma base prática para estudar os principais fundamentos presentes em aplicações back-end modernas.
 
-Utilizando **Python, FastAPI, SQLAlchemy e MySQL/MariaDB**, o projeto demonstra desde o recebimento de uma requisição HTTP até a comunicação com o banco de dados e o retorno de uma resposta para o cliente.
+Com **Python, FastAPI, SQLAlchemy e MySQL/MariaDB**, o projeto demonstra o ciclo completo de uma requisição: entrada HTTP, validação, processamento, acesso ao banco e retorno da resposta.
 
-O projeto também serve como base para futuras evoluções, como autenticação, testes automatizados, paginação, filtros, Docker e deploy.
+A estrutura também permite evoluções futuras, incluindo autenticação, testes automatizados, paginação, filtros, Docker e deploy.
 
-> 📚 **Aprender APIs é entender como diferentes aplicações conseguem se comunicar.**
+> 🌱 **Aprender APIs é entender como diferentes aplicações conseguem se comunicar — e transformar dados em funcionalidades reais.**
+
+<p align="center"><strong>🌿 Feito para estudar, testar e evoluir.</strong></p>
