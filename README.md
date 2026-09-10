@@ -427,7 +427,6 @@ Antes de executar o projeto, tenha instalado:
 ## 1. Clone o repositório
 
 ```bash
-git clone https://github.com/vitorgoncalvesb/api-livros.git
 
 ```
 
@@ -747,17 +746,6 @@ Entre os principais conceitos trabalhados estão:
 
 ---
 
-# 👨‍💻 Autor
-
-Desenvolvido por **Vitor Gonçalves Barros**.
-
-GitHub:
-
-[**@vitorgoncalvesb**](https://github.com/vitorgoncalvesb)
-
-Repositório:
-
-[**api-livros**](https://github.com/vitorgoncalvesb/api-livros)
 
 ---
 
