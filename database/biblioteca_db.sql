@@ -1,39 +1,29 @@
-from collections.abc import Generator
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: 127.0.0.1
+-- Tempo de geração: 02/09/2026 às 22:22
+-- Versão do servidor: 10.4.32-MariaDB
+-- Versão do PHP: 8.2.12
 
-from pydantic_settings import BaseSettings, SettingsConfigDict
-from sqlalchemy import create_engine
-from sqlalchemy.orm import DeclarativeBase, Session, sessionmaker
-
-
-class Configuracoes(BaseSettings):
-    db_user: str
-    db_password: str
-    db_host: str = "localhost"
-    db_port: int = 3306
-    db_name: str
-
-    model_config = SettingsConfigDict(env_file=".env", extra="ignore")
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
 
 
-configuracoes = Configuracoes()
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
 
-DATABASE_URL = (
-    f"mysql+pymysql://{configuracoes.db_user}:{configuracoes.db_password}"
-    f"@{configuracoes.db_host}:{configuracoes.db_port}/{configuracoes.db_name}"
-)
+--
+-- Banco de dados: `biblioteca_db`
+--
+CREATE DATABASE IF NOT EXISTS `biblioteca_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `biblioteca_db`;
+COMMIT;
 
-mecanismo_banco = create_engine(DATABASE_URL, pool_pre_ping=True)
-criar_sessao = sessionmaker(bind=mecanismo_banco, autoflush=False, autocommit=False)
-
-
-class BaseBanco(DeclarativeBase):
-    pass
-
-
-def obter_sessao_banco() -> Generator[Session, None, None]:
-    sessao_banco = criar_sessao()
-
-    try:
-        yield sessao_banco
-    finally:
-        sessao_banco.close()
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
