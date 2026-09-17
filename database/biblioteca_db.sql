@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 10-Set-2026 às 14:29
+-- Tempo de geração: 17-Set-2026 às 14:17
 -- Versão do servidor: 10.4.22-MariaDB
 -- versão do PHP: 8.1.2
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `biblioteca_db`
 --
+CREATE DATABASE IF NOT EXISTS `biblioteca_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE `biblioteca_db`;
 
 -- --------------------------------------------------------
 
@@ -29,18 +31,24 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `livros` (
   `id` int(11) NOT NULL,
-  `titulo` varchar(150) NOT NULL,
-  `autor` varchar(120) NOT NULL,
+  `titulo` varchar(150) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `autor` varchar(120) COLLATE utf8mb4_unicode_ci NOT NULL,
   `ano_publicacao` int(11) NOT NULL,
   `disponivel` tinyint(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Extraindo dados da tabela `livros`
 --
 
 INSERT INTO `livros` (`id`, `titulo`, `autor`, `ano_publicacao`, `disponivel`) VALUES
-(1, 'O Hobbit', 'J. R. R. Tolkien', 1937, 1);
+(2, 'Dom Casmurro', 'Machado de Assis', 1899, 1),
+(3, '1984', 'George Orwell', 1949, 1),
+(4, 'O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 1943, 0),
+(5, 'Harry Potter e a Pedra Filosofal', 'J. K. Rowling', 1997, 1),
+(6, 'A Revolução dos Bichos', 'George Orwell', 1945, 0),
+(7, 'Orgulho e Preconceito', 'Jane Austen', 1813, 1),
+(8, 'Cem Anos de Solidão', 'Gabriel García Márquez', 1967, 1);
 
 --
 -- Índices para tabelas despejadas
@@ -61,7 +69,7 @@ ALTER TABLE `livros`
 -- AUTO_INCREMENT de tabela `livros`
 --
 ALTER TABLE `livros`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
