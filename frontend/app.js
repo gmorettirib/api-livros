@@ -188,6 +188,7 @@ async function excluirLivro(idLivro, titulo) {
       limparFormulario();
     }
 
+    
     mostrarMensagem(mensagemLista, "Livro excluído com sucesso.", "success");
     await carregarLivros();
   } catch (erro) {
